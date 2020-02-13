@@ -12,6 +12,7 @@ datagroup: sales_insights_default_datagroup {
 persist_with: sales_insights_default_datagroup
 
 view: internetsalescubebigquery {
+  label: "Internet Sales Cube - BigQuery"
   sql_table_name: `sales insights - big query`.`internet sales cube - bigquery` ;;
   dimension: Color {
     group_label: "Product Attributes"
@@ -37,11 +38,13 @@ view: internetsalescubebigquery {
     label: "Order Quantity"
     type: sum
     sql:  ${TABLE}.orderquantity1;;
+    value_format: "0"
   }
   measure: salesamount1 {
     group_label: "Sales Metrics"
     label: "Sales Amount"
     type: sum
     sql:  ${TABLE}.salesamount1;;
+    value_format: "0"
   }
 }
