@@ -1,5 +1,5 @@
 connection: "finance_server"
-label: "Sales Insights - Big Query"
+label: "AtScale Finance"
 explore: internetsalescubebigquery {
   label: "Sales Insights - Big Query"
 }
