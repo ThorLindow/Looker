@@ -1,4 +1,8 @@
 connection: "finance_server"
+label: "Sales Insights - Big Query"
+explore: internetsalescubebigquery {
+  label: "Sales Insights - Big Query"
+}
 
 datagroup: sales_insights_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -7,7 +11,8 @@ datagroup: sales_insights_default_datagroup {
 
 persist_with: sales_insights_default_datagroup
 
-view: internet-sales-cube {
+view: internetsalescubebigquery {
+  sql_table_name: `internet sales cube - bigquery` ;;
   dimension: Color {
     group_label: "Product Attributes"
     sql: ${TABLE}.Color ;;
