@@ -12,7 +12,7 @@ datagroup: sales_insights_default_datagroup {
 persist_with: sales_insights_default_datagroup
 
 view: internetsalescubebigquery {
-  sql_table_name: `sales insights - bigquery`.`internet sales cube - bigquery` ;;
+  sql_table_name: `sales insights - big query`.`internet sales cube - bigquery` ;;
   dimension: Color {
     group_label: "Product Attributes"
     sql: ${TABLE}.Color ;;
