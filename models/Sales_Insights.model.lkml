@@ -15,20 +15,27 @@ view: internetsalescubebigquery {
   label: "Internet Sales Cube - BigQuery"
   sql_table_name: `sales insights - big query`.`internet sales cube - bigquery` ;;
   dimension: Color {
+    type: string
     group_label: "Product Attributes"
     sql: ${TABLE}.Color ;;
+    alias: [color]
   }
   dimension: CountryCity {
+    type: string
     group_label: "Geography City"
     label: "Country"
     sql: ${TABLE}.CountryCity ;;
+    alias: [country]
   }
   dimension: State {
+    type: string
     group_label: "Geography City"
-    label: "State"
+    label: "  State"
     sql: ${TABLE}.State ;;
+    alias: [state]
   }
   dimension: City {
+    type: string
     group_label: "Geography City"
     label: "City"
     sql: ${TABLE}.City ;;
@@ -38,13 +45,16 @@ view: internetsalescubebigquery {
     label: "Order Quantity"
     type: sum
     sql:  ${TABLE}.orderquantity1;;
-    value_format: "0"
+    alias: [orderquantity]
+    #value_format: "0"
   }
   measure: salesamount1 {
     group_label: "Sales Metrics"
     label: "Sales Amount"
     type: sum
-    sql:  ${TABLE}.salesamount1;;
-    value_format: "0"
+    sql: ${TABLE}.salesamount1;;
+    alias: [salesamount]
+    #value_format: "0"
   }
+
 }
