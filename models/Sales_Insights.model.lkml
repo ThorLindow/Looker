@@ -34,7 +34,7 @@ view: internetsalescubebigquery {
   dimension: City {
     type: string
     group_label: "Geography City"
-    label: "City"
+    label: " City"
     sql: ${TABLE}.City;;
   }
   measure: orderquantity1 {
