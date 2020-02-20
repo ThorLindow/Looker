@@ -35,7 +35,7 @@ view: internetsalescubebigquery {
     type: string
     group_label: "Geography City"
     label: "City"
-    sql: ${TABLE}.City as "City";;
+    sql: ${TABLE}.City;;
   }
   measure: orderquantity1 {
     group_label: "Sales Metrics"
