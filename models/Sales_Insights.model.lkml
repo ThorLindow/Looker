@@ -22,19 +22,19 @@ view: internetsalescubebigquery {
   dimension: CountryCity {
     type: string
     group_label: "Geography City"
-    label: "Country"
+    label: "  Country"
     sql: ${TABLE}.CountryCity ;;
   }
   dimension: State {
     type: string
     group_label: "Geography City"
-    label: "  State"
+    label: " State"
     sql: ${TABLE}.State ;;
   }
   dimension: City {
     type: string
     group_label: "Geography City"
-    label: " City"
+    label: "City"
     sql: ${TABLE}.City;;
   }
   measure: orderquantity1 {
