@@ -4,13 +4,6 @@ explore: internetsalescubebigquery {
   label: "Sales Insights - Redshift"
 }
 
-datagroup: sales_insights_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
-}
-
-persist_with: sales_insights_default_datagroup
-
 view: internetsalescubebigquery {
   label: "Internet Sales Cube - Redshift"
   sql_table_name: `sales insights - Redshift`.`internet sales cube` ;;
@@ -23,12 +16,14 @@ view: internetsalescubebigquery {
     type: string
     group_label: "Geography City"
     label: "  Country"
+    drill_fields: [State]
     sql: ${TABLE}.CountryCity ;;
   }
   dimension: State {
     type: string
     group_label: "Geography City"
     label: " State"
+    drill_fields: [City]
     sql: ${TABLE}.State ;;
   }
   dimension: City {
