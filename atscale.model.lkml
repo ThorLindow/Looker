@@ -16,12 +16,14 @@ view: internetsalescubebigquery {
     type: string
     group_label: "Geography City"
     label: "  Country"
+    drill_fields: [State]
     sql: ${TABLE}.CountryCity ;;
   }
   dimension: State {
     type: string
     group_label: "Geography City"
     label: " State"
+    drill_fields: [City]
     sql: ${TABLE}.State ;;
   }
   dimension: City {
