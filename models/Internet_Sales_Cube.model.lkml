@@ -2,7 +2,7 @@ connection: "finance_server"
 label: "default"
 
 explore: Sales_Insights___Redshift {
-  label: "Sales Insights - Redshift"
+  label: "Sales Insights - Redshift Gen"
 }
 
 view: Sales_Insights___Redshift {
