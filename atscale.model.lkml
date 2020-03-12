@@ -10,43 +10,43 @@ view: Sales_Insights___Redshift {
   sql_table_name: "Sales Insights - Redshift"."Internet Sales Cube";;
 
   dimension: Geography_City.City {
-    label: "Geography City.City"
-    group_label: "Customer Attributes"
+    label: "  City"
+    group_label: "Customer Attributes.Geography City"
     type: string
     sql: ${TABLE}.`City`;;
   }
 
   dimension: Color {
     label: "Color"
-    group_label: "Product Attributes"
     description: "Product Color"
+    group_label: "Product Attributes"
     type: string
     sql: ${TABLE}.`Color`;;
   }
 
   dimension: Geography_City.CountryCity {
-    label: "Geography City.Country"
-    group_label: "Customer Attributes"
+    label: "    Country"
+    group_label: "Customer Attributes.Geography City"
     type: string
     sql: ${TABLE}.`CountryCity`;;
   }
 
   dimension: Geography_Zip.CountryZip {
-    label: "Geography Zip.Country"
-    group_label: "Customer Attributes"
+    label: "   Country"
+    group_label: "Customer Attributes.Geography Zip"
     type: string
     sql: ${TABLE}.`CountryZip`;;
   }
 
-  dimension: Customer_Name {
+  dimension: Customer_Hierarchy.Customer_Name {
     label: "Customer Name"
-    group_label: "Customer Attributes"
     description: "Customer Key"
+    group_label: "Customer Attributes"
     type: string
     sql: ${TABLE}.`Customer Name`;;
   }
 
-  dimension: Gender {
+  dimension: Gender_Hierarchy.Gender {
     label: "Gender"
     group_label: "Customer Attributes"
     type: string
@@ -61,705 +61,299 @@ view: Sales_Insights___Redshift {
   }
 
   dimension: Date_Week_Hierarchy.Order_DayMonth {
-    label: "Date Week Hierarchy.Order Day"
-    group_label: "Date Attributes"
+    label: " Order Day"
     description: "Day level of standard calendar Month Hierarchy"
+    group_label: "Date Attributes.Order Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Order DayMonth`;;
   }
 
   dimension: Date_Month_Hierarchy.Order_DayMonth {
-    label: "Date Month Hierarchy.Order Day"
-    group_label: "Date Attributes"
+    label: " Order Day"
     description: "Day level of standard calendar Month Hierarchy"
+    group_label: "Date Attributes.Order Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Order DayMonth`;;
   }
 
-  dimension: Date_Month_Hierarchy.Order_Day_Date {
-    label: "Date Month Hierarchy.Order Day Date"
-    group_label: "Date Attributes"
-    type: date_time
-    sql: ${TABLE}.`Order Day_Date`;;
-  }
-
   dimension: Date_Month_Hierarchy.Order_Month1 {
-    label: "Date Month Hierarchy.Order Month"
-    group_label: "Date Attributes"
+    label: "  Order Month"
+    group_label: "Date Attributes.Order Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Order Month1`;;
   }
 
   dimension: Date_Month_Hierarchy.Order_Quarter {
-    label: "Date Month Hierarchy.Order Quarter"
-    group_label: "Date Attributes"
+    label: "   Order Quarter"
+    group_label: "Date Attributes.Order Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Order Quarter`;;
   }
 
   dimension: Retail445.Order_ReportIng_Half_Year {
-    label: "Retail445.Order ReportIng Half Year"
-    group_label: "Date Attributes"
+    label: "     Order ReportIng Half Year"
+    group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Half_Year`;;
   }
 
   dimension: Retail445.Order_ReportIng_Month {
-    label: "Retail445.Order ReportIng Month"
-    group_label: "Date Attributes"
+    label: "   Order ReportIng Month"
+    group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Month`;;
   }
 
   dimension: Retail445.Order_ReportIng_Quarter {
-    label: "Retail445.Order ReportIng Quarter"
-    group_label: "Date Attributes"
+    label: "    Order ReportIng Quarter"
+    group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Quarter`;;
   }
 
   dimension: Retail445.Order_ReportIng_Week {
-    label: "Retail445.Order ReportIng Week"
-    group_label: "Date Attributes"
+    label: "  Order ReportIng Week"
     description: "Week level of the 4-4-5 calendar"
+    group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Week`;;
   }
 
   dimension: Retail445.Order_ReportIng_Year {
-    label: "Retail445.Order ReportIng Year"
-    group_label: "Date Attributes"
+    label: "      Order ReportIng Year"
+    group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Year`;;
   }
 
   dimension: Retail445.Order_Reporting_Day {
-    label: "Retail445.Order Reporting Day"
-    group_label: "Date Attributes"
+    label: " Order Reporting Day"
     description: "A Retail 4-4-5 calendar"
+    group_label: "Date Attributes.Order Retail445"
     type: date_time
     sql: ${TABLE}.`Order Reporting_Day`;;
   }
 
-  dimension: Retail445.Order_Reporting_Day_Of_Month {
-    label: "Retail445.Order ReportIng Day Of Month"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order Reporting_Day_Of_Month`;;
-  }
-
-  dimension: Retail445.Order_Reporting_Day_Of_Week {
-    label: "Retail445.Order ReportIng Day Of Week"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order Reporting_Day_Of_Week`;;
-  }
-
-  dimension: Retail445.Order_Reporting_Day_Of_Year {
-    label: "Retail445.Order ReportIng Day Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order Reporting_Day_Of_Year`;;
-  }
-
-  dimension: Retail445.Order_Reporting_Half_Year_Of_Year {
-    label: "Retail445.Order ReportIng Half Year Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order Reporting_Half_Year_Of_Year`;;
-  }
-
-  dimension: Retail445.Order_Reporting_Month_Of_Quarter {
-    label: "Retail445.Order ReportIng Month Of Quarter"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order Reporting_Month_Of_Quarter`;;
-  }
-
-  dimension: Retail445.Order_Reporting_Month_Of_Year {
-    label: "Retail445.Order ReportIng Month Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order Reporting_Month_Of_Year`;;
-  }
-
-  dimension: Retail445.Order_Reporting_Quarter_Of_Year {
-    label: "Retail445.Order ReportIng Quarter Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order Reporting_Quarter_Of_Year`;;
-  }
-
-  dimension: Retail445.Order_Reporting_Week_Of_Month {
-    label: "Retail445.Order ReportIng Week Of Month"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order Reporting_Week_Of_Month`;;
-  }
-
-  dimension: Retail445.Order_Reporting_Week_Of_Year {
-    label: "Retail445.Order ReportIng Week Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order Reporting_Week_Of_Year`;;
-  }
-
-  dimension: Date_Week_Hierarchy.Order_W_Day_Date {
-    label: "Date Week Hierarchy.Order W Day Date"
-    group_label: "Date Attributes"
-    type: date_time
-    sql: ${TABLE}.`Order W_Day_Date`;;
-  }
-
   dimension: Date_Week_Hierarchy.Order_Week {
-    label: "Date Week Hierarchy.Order Week"
-    group_label: "Date Attributes"
+    label: "  Order Week"
+    group_label: "Date Attributes.Order Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Order Week`;;
   }
 
   dimension: Date_Month_Hierarchy.Order_YearMonth {
-    label: "Date Month Hierarchy.Order Year"
-    group_label: "Date Attributes"
+    label: "    Order Year"
     description: "Year level of the Standard Calendar Month Hierarchy."
+    group_label: "Date Attributes.Order Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Order YearMonth`;;
   }
 
   dimension: Date_Week_Hierarchy.Order_YearWeek {
-    label: "Date Week Hierarchy.Order Year"
-    group_label: "Date Attributes"
+    label: "   Order Year"
+    group_label: "Date Attributes.Order Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Order YearWeek`;;
   }
 
   dimension: CustomPP445.Order_customday {
-    label: "CustomPP445.Order Custom Day"
-    group_label: "Date Attributes"
+    label: " Order Custom Day"
     description: "A 445 calendar with custom parallel period keys defined for each level.  The underlying data matches the results of the Retail445 hierarchy because the data table contains the standard key assignments generated by the default ParallelPeriod logic.  A real custom ParallelPeriod hierarchy would have different parallel period key assignments to satisfy the reporting business's reporting comparison requirements."
+    group_label: "Date Attributes.Order CustomPP445"
     type: date_time
     sql: ${TABLE}.`Order customday`;;
   }
 
   dimension: CustomPP445.Order_custommonth {
-    label: "CustomPP445.Order Custom Month"
-    group_label: "Date Attributes"
+    label: "   Order Custom Month"
     description: "Same as [Retail445].[Reporting Month] but has a custom parallel period key."
+    group_label: "Date Attributes.Order CustomPP445"
     type: string
     sql: ${TABLE}.`Order custommonth`;;
   }
 
   dimension: CustomPP445.Order_customquarter {
-    label: "CustomPP445.Order Custom Quarter"
-    group_label: "Date Attributes"
+    label: "    Order Custom Quarter"
     description: "Same as [Retail445].[Reporting Quarter] but has a custom parallel period key."
+    group_label: "Date Attributes.Order CustomPP445"
     type: string
     sql: ${TABLE}.`Order customquarter`;;
   }
 
   dimension: CustomPP445.Order_customweek {
-    label: "CustomPP445.Order Custom Week"
-    group_label: "Date Attributes"
+    label: "  Order Custom Week"
     description: "Same as [Retail445].[Reporting Week] but has a custom parallel period key."
+    group_label: "Date Attributes.Order CustomPP445"
     type: string
     sql: ${TABLE}.`Order customweek`;;
   }
 
   dimension: CustomPP445.Order_customyear {
-    label: "CustomPP445.Order Custom Year"
-    group_label: "Date Attributes"
+    label: "     Order Custom Year"
     description: "Same as [Retail445].[Reporting Year] but has a custom parallel period key."
+    group_label: "Date Attributes.Order CustomPP445"
     type: string
     sql: ${TABLE}.`Order customyear`;;
   }
 
-  dimension: CustomPP445.Order_d_Custom_Day_Of_Month {
-    label: "CustomPP445.Order Custom Day Of Month"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Custom_Day_Of_Month`;;
-  }
-
-  dimension: CustomPP445.Order_d_Custom_Day_Of_Week {
-    label: "CustomPP445.Order Custom Day Of Week"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Custom_Day_Of_Week`;;
-  }
-
-  dimension: CustomPP445.Order_d_Custom_Day_Of_Year {
-    label: "CustomPP445.Order Custom Day Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Custom_Day_Of_Year`;;
-  }
-
-  dimension: CustomPP445.Order_d_Custom_Month_Name {
-    label: "CustomPP445.Order Custom Month Name"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Custom_Month_Name`;;
-  }
-
-  dimension: CustomPP445.Order_d_Custom_Month_Of_Quarter {
-    label: "CustomPP445.Order Custom Month Of Quarter"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Custom_Month_Of_Quarter`;;
-  }
-
-  dimension: CustomPP445.Order_d_Custom_Month_Of_Year {
-    label: "CustomPP445.Order Custom Month Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Custom_Month_Of_Year`;;
-  }
-
-  dimension: CustomPP445.Order_d_Custom_Quarter_Of_Year {
-    label: "CustomPP445.Order Custom Quarter Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Custom_Quarter_Of_Year`;;
-  }
-
-  dimension: CustomPP445.Order_d_Custom_Week_Of_Month {
-    label: "CustomPP445.Order Custom Week Of Month"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Custom_Week_Of_Month`;;
-  }
-
-  dimension: CustomPP445.Order_d_Custom_Week_Of_Year {
-    label: "CustomPP445.Order Custom Week Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Custom_Week_Of_Year`;;
-  }
-
-  dimension: Retail445.Order_d_Reporting_Month_Name {
-    label: "Retail445.Order ReportIng Month Name"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_Reporting_Month_Name`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Order_d_day_of_month {
-    label: "Date Month Hierarchy.Order Day Of Month"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Order d_day_of_month`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Order_d_day_of_week_name {
-    label: "Date Month Hierarchy.Order Day Of Week Name"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order d_day_of_week_name`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Order_d_day_of_week_number {
-    label: "Date Month Hierarchy.Order Day Of Week Number"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Order d_day_of_week_number`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Order_d_month_of_year {
-    label: "Date Month Hierarchy.Order Month Of Year"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Order d_month_of_year`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Order_d_quarter_number {
-    label: "Date Month Hierarchy.Order Quarter Number"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Order d_quarter_number`;;
-  }
-
-  dimension: Date_Week_Hierarchy.Order_d_week_of_year {
-    label: "Date Week Hierarchy.Order Week Of Year"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Order d_week_of_year`;;
-  }
-
-  dimension: Date_Week_Hierarchy.Order_w_day_of_week_name {
-    label: "Date Week Hierarchy.Order W Day Of Week Name"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Order w_day_of_week_name`;;
-  }
-
-  dimension: Date_Week_Hierarchy.Order_w_day_of_week_number {
-    label: "Date Week Hierarchy.Order W Day Of Week Number"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Order w_day_of_week_number`;;
-  }
-
   dimension: Product_Dimension.Product_Category {
-    label: "Product Hierarchy.Product Category"
-    group_label: "Product Attributes"
+    label: "  Product Category"
     description: "Product Sub Category"
+    group_label: "Product Attributes.Product Hierarchy"
     type: string
     sql: ${TABLE}.`Product Category`;;
   }
 
   dimension: Product_Dimension.Product_Line {
-    label: "Product Hierarchy.Product Line"
-    group_label: "Product Attributes"
+    label: "   Product Line"
     description: "Product Line"
+    group_label: "Product Attributes.Product Hierarchy"
     type: string
     sql: ${TABLE}.`Product Line`;;
   }
 
   dimension: Product_Dimension.Product_Name {
-    label: "Product Hierarchy.Product Name"
-    group_label: "Product Attributes"
+    label: " Product Name"
     description: "Full Product Name"
+    group_label: "Product Attributes.Product Hierarchy"
     type: string
     sql: ${TABLE}.`Product Name`;;
   }
 
   dimension: Date_Week_Hierarchy.Ship_DayMonth {
-    label: "Date Week Hierarchy.Ship Day"
-    group_label: "Date Attributes"
+    label: " Ship Day"
     description: "Day level of standard calendar Month Hierarchy"
+    group_label: "Date Attributes.Ship Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Ship DayMonth`;;
   }
 
   dimension: Date_Month_Hierarchy.Ship_DayMonth {
-    label: "Date Month Hierarchy.Ship Day"
-    group_label: "Date Attributes"
+    label: " Ship Day"
     description: "Day level of standard calendar Month Hierarchy"
+    group_label: "Date Attributes.Ship Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Ship DayMonth`;;
   }
 
-  dimension: Date_Month_Hierarchy.Ship_Day_Date {
-    label: "Date Month Hierarchy.Ship Day Date"
-    group_label: "Date Attributes"
-    type: date_time
-    sql: ${TABLE}.`Ship Day_Date`;;
-  }
-
   dimension: Date_Month_Hierarchy.Ship_Month1 {
-    label: "Date Month Hierarchy.Ship Month"
-    group_label: "Date Attributes"
+    label: "  Ship Month"
+    group_label: "Date Attributes.Ship Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Ship Month1`;;
   }
 
   dimension: Date_Month_Hierarchy.Ship_Quarter {
-    label: "Date Month Hierarchy.Ship Quarter"
-    group_label: "Date Attributes"
+    label: "   Ship Quarter"
+    group_label: "Date Attributes.Ship Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Ship Quarter`;;
   }
 
   dimension: Retail445.Ship_ReportIng_Half_Year {
-    label: "Retail445.Ship ReportIng Half Year"
-    group_label: "Date Attributes"
+    label: "     Ship ReportIng Half Year"
+    group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Half_Year`;;
   }
 
   dimension: Retail445.Ship_ReportIng_Month {
-    label: "Retail445.Ship ReportIng Month"
-    group_label: "Date Attributes"
+    label: "   Ship ReportIng Month"
+    group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Month`;;
   }
 
   dimension: Retail445.Ship_ReportIng_Quarter {
-    label: "Retail445.Ship ReportIng Quarter"
-    group_label: "Date Attributes"
+    label: "    Ship ReportIng Quarter"
+    group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Quarter`;;
   }
 
   dimension: Retail445.Ship_ReportIng_Week {
-    label: "Retail445.Ship ReportIng Week"
-    group_label: "Date Attributes"
+    label: "  Ship ReportIng Week"
     description: "Week level of the 4-4-5 calendar"
+    group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Week`;;
   }
 
   dimension: Retail445.Ship_ReportIng_Year {
-    label: "Retail445.Ship ReportIng Year"
-    group_label: "Date Attributes"
+    label: "      Ship ReportIng Year"
+    group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Year`;;
   }
 
   dimension: Retail445.Ship_Reporting_Day {
-    label: "Retail445.Ship Reporting Day"
-    group_label: "Date Attributes"
+    label: " Ship Reporting Day"
     description: "A Retail 4-4-5 calendar"
+    group_label: "Date Attributes.Ship Retail445"
     type: date_time
     sql: ${TABLE}.`Ship Reporting_Day`;;
   }
 
-  dimension: Retail445.Ship_Reporting_Day_Of_Month {
-    label: "Retail445.Ship ReportIng Day Of Month"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship Reporting_Day_Of_Month`;;
-  }
-
-  dimension: Retail445.Ship_Reporting_Day_Of_Week {
-    label: "Retail445.Ship ReportIng Day Of Week"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship Reporting_Day_Of_Week`;;
-  }
-
-  dimension: Retail445.Ship_Reporting_Day_Of_Year {
-    label: "Retail445.Ship ReportIng Day Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship Reporting_Day_Of_Year`;;
-  }
-
-  dimension: Retail445.Ship_Reporting_Half_Year_Of_Year {
-    label: "Retail445.Ship ReportIng Half Year Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship Reporting_Half_Year_Of_Year`;;
-  }
-
-  dimension: Retail445.Ship_Reporting_Month_Of_Quarter {
-    label: "Retail445.Ship ReportIng Month Of Quarter"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship Reporting_Month_Of_Quarter`;;
-  }
-
-  dimension: Retail445.Ship_Reporting_Month_Of_Year {
-    label: "Retail445.Ship ReportIng Month Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship Reporting_Month_Of_Year`;;
-  }
-
-  dimension: Retail445.Ship_Reporting_Quarter_Of_Year {
-    label: "Retail445.Ship ReportIng Quarter Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship Reporting_Quarter_Of_Year`;;
-  }
-
-  dimension: Retail445.Ship_Reporting_Week_Of_Month {
-    label: "Retail445.Ship ReportIng Week Of Month"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship Reporting_Week_Of_Month`;;
-  }
-
-  dimension: Retail445.Ship_Reporting_Week_Of_Year {
-    label: "Retail445.Ship ReportIng Week Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship Reporting_Week_Of_Year`;;
-  }
-
-  dimension: Date_Week_Hierarchy.Ship_W_Day_Date {
-    label: "Date Week Hierarchy.Ship W Day Date"
-    group_label: "Date Attributes"
-    type: date_time
-    sql: ${TABLE}.`Ship W_Day_Date`;;
-  }
-
   dimension: Date_Week_Hierarchy.Ship_Week {
-    label: "Date Week Hierarchy.Ship Week"
-    group_label: "Date Attributes"
+    label: "  Ship Week"
+    group_label: "Date Attributes.Ship Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Ship Week`;;
   }
 
   dimension: Date_Month_Hierarchy.Ship_YearMonth {
-    label: "Date Month Hierarchy.Ship Year"
-    group_label: "Date Attributes"
+    label: "    Ship Year"
     description: "Year level of the Standard Calendar Month Hierarchy."
+    group_label: "Date Attributes.Ship Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Ship YearMonth`;;
   }
 
   dimension: Date_Week_Hierarchy.Ship_YearWeek {
-    label: "Date Week Hierarchy.Ship Year"
-    group_label: "Date Attributes"
+    label: "   Ship Year"
+    group_label: "Date Attributes.Ship Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Ship YearWeek`;;
   }
 
   dimension: CustomPP445.Ship_customday {
-    label: "CustomPP445.Ship Custom Day"
-    group_label: "Date Attributes"
+    label: " Ship Custom Day"
     description: "A 445 calendar with custom parallel period keys defined for each level.  The underlying data matches the results of the Retail445 hierarchy because the data table contains the standard key assignments generated by the default ParallelPeriod logic.  A real custom ParallelPeriod hierarchy would have different parallel period key assignments to satisfy the reporting business's reporting comparison requirements."
+    group_label: "Date Attributes.Ship CustomPP445"
     type: date_time
     sql: ${TABLE}.`Ship customday`;;
   }
 
   dimension: CustomPP445.Ship_custommonth {
-    label: "CustomPP445.Ship Custom Month"
-    group_label: "Date Attributes"
+    label: "   Ship Custom Month"
     description: "Same as [Retail445].[Reporting Month] but has a custom parallel period key."
+    group_label: "Date Attributes.Ship CustomPP445"
     type: string
     sql: ${TABLE}.`Ship custommonth`;;
   }
 
   dimension: CustomPP445.Ship_customquarter {
-    label: "CustomPP445.Ship Custom Quarter"
-    group_label: "Date Attributes"
+    label: "    Ship Custom Quarter"
     description: "Same as [Retail445].[Reporting Quarter] but has a custom parallel period key."
+    group_label: "Date Attributes.Ship CustomPP445"
     type: string
     sql: ${TABLE}.`Ship customquarter`;;
   }
 
   dimension: CustomPP445.Ship_customweek {
-    label: "CustomPP445.Ship Custom Week"
-    group_label: "Date Attributes"
+    label: "  Ship Custom Week"
     description: "Same as [Retail445].[Reporting Week] but has a custom parallel period key."
+    group_label: "Date Attributes.Ship CustomPP445"
     type: string
     sql: ${TABLE}.`Ship customweek`;;
   }
 
   dimension: CustomPP445.Ship_customyear {
-    label: "CustomPP445.Ship Custom Year"
-    group_label: "Date Attributes"
+    label: "     Ship Custom Year"
     description: "Same as [Retail445].[Reporting Year] but has a custom parallel period key."
+    group_label: "Date Attributes.Ship CustomPP445"
     type: string
     sql: ${TABLE}.`Ship customyear`;;
-  }
-
-  dimension: CustomPP445.Ship_d_Custom_Day_Of_Month {
-    label: "CustomPP445.Ship Custom Day Of Month"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Custom_Day_Of_Month`;;
-  }
-
-  dimension: CustomPP445.Ship_d_Custom_Day_Of_Week {
-    label: "CustomPP445.Ship Custom Day Of Week"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Custom_Day_Of_Week`;;
-  }
-
-  dimension: CustomPP445.Ship_d_Custom_Day_Of_Year {
-    label: "CustomPP445.Ship Custom Day Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Custom_Day_Of_Year`;;
-  }
-
-  dimension: CustomPP445.Ship_d_Custom_Month_Name {
-    label: "CustomPP445.Ship Custom Month Name"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Custom_Month_Name`;;
-  }
-
-  dimension: CustomPP445.Ship_d_Custom_Month_Of_Quarter {
-    label: "CustomPP445.Ship Custom Month Of Quarter"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Custom_Month_Of_Quarter`;;
-  }
-
-  dimension: CustomPP445.Ship_d_Custom_Month_Of_Year {
-    label: "CustomPP445.Ship Custom Month Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Custom_Month_Of_Year`;;
-  }
-
-  dimension: CustomPP445.Ship_d_Custom_Quarter_Of_Year {
-    label: "CustomPP445.Ship Custom Quarter Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Custom_Quarter_Of_Year`;;
-  }
-
-  dimension: CustomPP445.Ship_d_Custom_Week_Of_Month {
-    label: "CustomPP445.Ship Custom Week Of Month"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Custom_Week_Of_Month`;;
-  }
-
-  dimension: CustomPP445.Ship_d_Custom_Week_Of_Year {
-    label: "CustomPP445.Ship Custom Week Of Year"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Custom_Week_Of_Year`;;
-  }
-
-  dimension: Retail445.Ship_d_Reporting_Month_Name {
-    label: "Retail445.Ship ReportIng Month Name"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_Reporting_Month_Name`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Ship_d_day_of_month {
-    label: "Date Month Hierarchy.Ship Day Of Month"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Ship d_day_of_month`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Ship_d_day_of_week_name {
-    label: "Date Month Hierarchy.Ship Day Of Week Name"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship d_day_of_week_name`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Ship_d_day_of_week_number {
-    label: "Date Month Hierarchy.Ship Day Of Week Number"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Ship d_day_of_week_number`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Ship_d_month_of_year {
-    label: "Date Month Hierarchy.Ship Month Of Year"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Ship d_month_of_year`;;
-  }
-
-  dimension: Date_Month_Hierarchy.Ship_d_quarter_number {
-    label: "Date Month Hierarchy.Ship Quarter Number"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Ship d_quarter_number`;;
-  }
-
-  dimension: Date_Week_Hierarchy.Ship_d_week_of_year {
-    label: "Date Week Hierarchy.Ship Week Of Year"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Ship d_week_of_year`;;
-  }
-
-  dimension: Date_Week_Hierarchy.Ship_w_day_of_week_name {
-    label: "Date Week Hierarchy.Ship W Day Of Week Name"
-    group_label: "Date Attributes"
-    type: string
-    sql: ${TABLE}.`Ship w_day_of_week_name`;;
-  }
-
-  dimension: Date_Week_Hierarchy.Ship_w_day_of_week_number {
-    label: "Date Week Hierarchy.Ship W Day Of Week Number"
-    group_label: "Date Attributes"
-    type: number
-    sql: ${TABLE}.`Ship w_day_of_week_number`;;
   }
 
   dimension: Size {
@@ -770,16 +364,16 @@ view: Sales_Insights___Redshift {
   }
 
   dimension: Geography_City.State {
-    label: "Geography City.State"
-    group_label: "Customer Attributes"
+    label: "   State"
+    group_label: "Customer Attributes.Geography City"
     type: string
     sql: ${TABLE}.`State`;;
   }
 
   dimension: Style {
     label: "Style"
-    group_label: "Product Attributes"
     description: "Product Style"
+    group_label: "Product Attributes"
     type: string
     sql: ${TABLE}.`Style`;;
   }
@@ -792,24 +386,17 @@ view: Sales_Insights___Redshift {
   }
 
   dimension: Geography_Zip.Zip_Code {
-    label: "Geography Zip.Zip Code"
-    group_label: "Customer Attributes"
+    label: "  Zip Code"
+    group_label: "Customer Attributes.Geography Zip"
     type: string
     sql: ${TABLE}.`Zip Code`;;
   }
 
   dimension: Order_Dimension.currency {
-    label: "Order Dimension.Currency"
-    group_label: "Orders"
+    label: "   Currency"
+    group_label: "Orders.Order Dimension"
     type: string
     sql: ${TABLE}.`currency`;;
-  }
-
-  dimension: Geography_City.d_city {
-    label: "Geography City.City"
-    group_label: "Customer Attributes"
-    type: string
-    sql: ${TABLE}.`d_city`;;
   }
 
   dimension: d_firstname {
@@ -826,42 +413,37 @@ view: Sales_Insights___Redshift {
     sql: ${TABLE}.`d_lastname`;;
   }
 
-  dimension: Geography_Zip.d_postalcode {
-    label: "Geography Zip.Postal Code"
-    group_label: "Customer Attributes"
-    type: string
-    sql: ${TABLE}.`d_postalcode`;;
-  }
-
-  dimension: Product_Dimension.d_productsubcategoryId {
-    label: "Product Hierarchy.Product Subcategory ID"
-    group_label: "Product Attributes"
+  dimension: d_productsubcategoryId {
+    label: "Product Subcategory ID"
     description: "ID of the product category"
+    group_label: "Product Attributes"
     type: number
     sql: ${TABLE}.`d_productsubcategoryId`;;
   }
 
   dimension: Order_Dimension.order {
-    label: "Order Dimension.Order"
-    group_label: "Orders"
+    label: "  Order"
+    group_label: "Orders.Order Dimension"
     type: string
     sql: ${TABLE}.`order`;;
   }
 
   dimension: Order_Dimension.order_line_item {
-    label: "Order Dimension.Order Line Item"
-    group_label: "Orders"
+    label: " Order Line Item"
     description: "Order Line Item"
+    group_label: "Orders.Order Dimension"
     type: number
     sql: ${TABLE}.`order_line_item`;;
   }
 
-  dimension: Order_Dimension.typeorder {
-    label: "Order Dimension.Order Type"
+  dimension: typeorder {
+    label: "Order Type"
     group_label: "Orders"
     type: string
     sql: ${TABLE}.`typeorder`;;
   }
+
+
 
   measure: List_Price {
     label: "List Price"
