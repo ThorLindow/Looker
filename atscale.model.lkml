@@ -29,6 +29,7 @@ view: Sales_Insights___Redshift {
     group_label: "Customer Attributes.Geography City"
     type: string
     sql: ${TABLE}.`CountryCity`;;
+    drill_fields: [Geography_City.State]
   }
 
   dimension: Geography_Zip.CountryZip {
@@ -36,6 +37,7 @@ view: Sales_Insights___Redshift {
     group_label: "Customer Attributes.Geography Zip"
     type: string
     sql: ${TABLE}.`CountryZip`;;
+    drill_fields: [Geography_Zip.Zip_Code]
   }
 
   dimension: Customer_Hierarchy.Customer_Name {
@@ -88,6 +90,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Order Month1`;;
+    drill_fields: [Date_Month_Hierarchy.Order_DayMonth]
   }
 
   dimension: Date_Month_Hierarchy.Order_Quarter {
@@ -95,6 +98,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Order Quarter`;;
+    drill_fields: [Date_Month_Hierarchy.Order_Month1]
   }
 
   dimension: Retail445.Order_ReportIng_Half_Year {
@@ -102,6 +106,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Half_Year`;;
+    drill_fields: [Retail445.Order_ReportIng_Quarter]
   }
 
   dimension: Retail445.Order_ReportIng_Month {
@@ -109,6 +114,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Month`;;
+    drill_fields: [Retail445.Order_ReportIng_Week]
   }
 
   dimension: Retail445.Order_ReportIng_Quarter {
@@ -116,6 +122,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Quarter`;;
+    drill_fields: [Retail445.Order_ReportIng_Month]
   }
 
   dimension: Retail445.Order_ReportIng_Week {
@@ -124,6 +131,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Week`;;
+    drill_fields: [Retail445.Order_Reporting_Day]
   }
 
   dimension: Retail445.Order_ReportIng_Year {
@@ -131,6 +139,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Retail445"
     type: string
     sql: ${TABLE}.`Order ReportIng_Year`;;
+    drill_fields: [Retail445.Order_ReportIng_Half_Year]
   }
 
   dimension: Retail445.Order_Reporting_Day {
@@ -216,6 +225,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Order Week`;;
+    drill_fields: [Date_Week_Hierarchy.Order_DayMonth]
   }
 
   dimension: Date_Month_Hierarchy.Order_YearMonth {
@@ -224,6 +234,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Order YearMonth`;;
+    drill_fields: [Date_Month_Hierarchy.Order_Quarter]
   }
 
   dimension: Date_Week_Hierarchy.Order_YearWeek {
@@ -231,6 +242,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Order YearWeek`;;
+    drill_fields: [Date_Week_Hierarchy.Order_Week]
   }
 
   dimension: CustomPP445.Order_customday {
@@ -247,6 +259,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order CustomPP445"
     type: string
     sql: ${TABLE}.`Order custommonth`;;
+    drill_fields: [CustomPP445.Order_customweek]
   }
 
   dimension: CustomPP445.Order_customquarter {
@@ -255,6 +268,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order CustomPP445"
     type: string
     sql: ${TABLE}.`Order customquarter`;;
+    drill_fields: [CustomPP445.Order_custommonth]
   }
 
   dimension: CustomPP445.Order_customweek {
@@ -263,6 +277,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order CustomPP445"
     type: string
     sql: ${TABLE}.`Order customweek`;;
+    drill_fields: [CustomPP445.Order_customday]
   }
 
   dimension: CustomPP445.Order_customyear {
@@ -271,6 +286,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order CustomPP445"
     type: string
     sql: ${TABLE}.`Order customyear`;;
+    drill_fields: [CustomPP445.Order_customquarter]
   }
 
   dimension: Order_d_Custom_Day_Of_Month {
@@ -405,6 +421,7 @@ view: Sales_Insights___Redshift {
     group_label: "Product Attributes.Product Hierarchy"
     type: string
     sql: ${TABLE}.`Product Category`;;
+    drill_fields: [Product_Dimension.Product_Name]
   }
 
   dimension: Product_Dimension.Product_Line {
@@ -413,6 +430,7 @@ view: Sales_Insights___Redshift {
     group_label: "Product Attributes.Product Hierarchy"
     type: string
     sql: ${TABLE}.`Product Line`;;
+    drill_fields: [Product_Dimension.Product_Category]
   }
 
   dimension: Product_Dimension.Product_Name {
@@ -451,6 +469,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Ship Month1`;;
+    drill_fields: [Date_Month_Hierarchy.Ship_DayMonth]
   }
 
   dimension: Date_Month_Hierarchy.Ship_Quarter {
@@ -458,6 +477,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Ship Quarter`;;
+    drill_fields: [Date_Month_Hierarchy.Ship_Month1]
   }
 
   dimension: Retail445.Ship_ReportIng_Half_Year {
@@ -465,6 +485,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Half_Year`;;
+    drill_fields: [Retail445.Ship_ReportIng_Quarter]
   }
 
   dimension: Retail445.Ship_ReportIng_Month {
@@ -472,6 +493,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Month`;;
+    drill_fields: [Retail445.Ship_ReportIng_Week]
   }
 
   dimension: Retail445.Ship_ReportIng_Quarter {
@@ -479,6 +501,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Quarter`;;
+    drill_fields: [Retail445.Ship_ReportIng_Month]
   }
 
   dimension: Retail445.Ship_ReportIng_Week {
@@ -487,6 +510,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Week`;;
+    drill_fields: [Retail445.Ship_Reporting_Day]
   }
 
   dimension: Retail445.Ship_ReportIng_Year {
@@ -494,6 +518,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Retail445"
     type: string
     sql: ${TABLE}.`Ship ReportIng_Year`;;
+    drill_fields: [Retail445.Ship_ReportIng_Half_Year]
   }
 
   dimension: Retail445.Ship_Reporting_Day {
@@ -579,6 +604,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Ship Week`;;
+    drill_fields: [Date_Week_Hierarchy.Ship_DayMonth]
   }
 
   dimension: Date_Month_Hierarchy.Ship_YearMonth {
@@ -587,6 +613,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Ship YearMonth`;;
+    drill_fields: [Date_Month_Hierarchy.Ship_Quarter]
   }
 
   dimension: Date_Week_Hierarchy.Ship_YearWeek {
@@ -594,6 +621,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Date Week Hierarchy"
     type: string
     sql: ${TABLE}.`Ship YearWeek`;;
+    drill_fields: [Date_Week_Hierarchy.Ship_Week]
   }
 
   dimension: CustomPP445.Ship_customday {
@@ -610,6 +638,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship CustomPP445"
     type: string
     sql: ${TABLE}.`Ship custommonth`;;
+    drill_fields: [CustomPP445.Ship_customweek]
   }
 
   dimension: CustomPP445.Ship_customquarter {
@@ -618,6 +647,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship CustomPP445"
     type: string
     sql: ${TABLE}.`Ship customquarter`;;
+    drill_fields: [CustomPP445.Ship_custommonth]
   }
 
   dimension: CustomPP445.Ship_customweek {
@@ -626,6 +656,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship CustomPP445"
     type: string
     sql: ${TABLE}.`Ship customweek`;;
+    drill_fields: [CustomPP445.Ship_customday]
   }
 
   dimension: CustomPP445.Ship_customyear {
@@ -634,6 +665,7 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship CustomPP445"
     type: string
     sql: ${TABLE}.`Ship customyear`;;
+    drill_fields: [CustomPP445.Ship_customquarter]
   }
 
   dimension: Ship_d_Custom_Day_Of_Month {
@@ -774,6 +806,7 @@ view: Sales_Insights___Redshift {
     group_label: "Customer Attributes.Geography City"
     type: string
     sql: ${TABLE}.`State`;;
+    drill_fields: [Geography_City.City]
   }
 
   dimension: Style {
@@ -803,6 +836,7 @@ view: Sales_Insights___Redshift {
     group_label: "Orders.Order Dimension"
     type: string
     sql: ${TABLE}.`currency`;;
+    drill_fields: [Order_Dimension.order]
   }
 
   dimension: d_city {
@@ -846,6 +880,7 @@ view: Sales_Insights___Redshift {
     group_label: "Orders.Order Dimension"
     type: string
     sql: ${TABLE}.`order`;;
+    drill_fields: [Order_Dimension.order_line_item]
   }
 
   dimension: Order_Dimension.order_line_item {
