@@ -76,6 +76,13 @@ view: Sales_Insights___Redshift {
     sql: ${TABLE}.`Order DayMonth`;;
   }
 
+  dimension: Order_Day_Date {
+    label: "Order Day Date"
+    group_label: "Date Attributes"
+    type: date_time
+    sql: ${TABLE}.`Order Day_Date`;;
+  }
+
   dimension: Date_Month_Hierarchy.Order_Month1 {
     label: "  Order Month"
     group_label: "Date Attributes.Order Date Month Hierarchy"
@@ -132,6 +139,76 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Order Retail445"
     type: date_time
     sql: ${TABLE}.`Order Reporting_Day`;;
+  }
+
+  dimension: Order_Reporting_Day_Of_Month {
+    label: "Order ReportIng Day Of Month"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order Reporting_Day_Of_Month`;;
+  }
+
+  dimension: Order_Reporting_Day_Of_Week {
+    label: "Order ReportIng Day Of Week"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order Reporting_Day_Of_Week`;;
+  }
+
+  dimension: Order_Reporting_Day_Of_Year {
+    label: "Order ReportIng Day Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order Reporting_Day_Of_Year`;;
+  }
+
+  dimension: Order_Reporting_Half_Year_Of_Year {
+    label: "Order ReportIng Half Year Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order Reporting_Half_Year_Of_Year`;;
+  }
+
+  dimension: Order_Reporting_Month_Of_Quarter {
+    label: "Order ReportIng Month Of Quarter"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order Reporting_Month_Of_Quarter`;;
+  }
+
+  dimension: Order_Reporting_Month_Of_Year {
+    label: "Order ReportIng Month Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order Reporting_Month_Of_Year`;;
+  }
+
+  dimension: Order_Reporting_Quarter_Of_Year {
+    label: "Order ReportIng Quarter Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order Reporting_Quarter_Of_Year`;;
+  }
+
+  dimension: Order_Reporting_Week_Of_Month {
+    label: "Order ReportIng Week Of Month"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order Reporting_Week_Of_Month`;;
+  }
+
+  dimension: Order_Reporting_Week_Of_Year {
+    label: "Order ReportIng Week Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order Reporting_Week_Of_Year`;;
+  }
+
+  dimension: Order_W_Day_Date {
+    label: "Order W Day Date"
+    group_label: "Date Attributes"
+    type: date_time
+    sql: ${TABLE}.`Order W_Day_Date`;;
   }
 
   dimension: Date_Week_Hierarchy.Order_Week {
@@ -196,6 +273,132 @@ view: Sales_Insights___Redshift {
     sql: ${TABLE}.`Order customyear`;;
   }
 
+  dimension: Order_d_Custom_Day_Of_Month {
+    label: "Order Custom Day Of Month"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Custom_Day_Of_Month`;;
+  }
+
+  dimension: Order_d_Custom_Day_Of_Week {
+    label: "Order Custom Day Of Week"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Custom_Day_Of_Week`;;
+  }
+
+  dimension: Order_d_Custom_Day_Of_Year {
+    label: "Order Custom Day Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Custom_Day_Of_Year`;;
+  }
+
+  dimension: Order_d_Custom_Month_Name {
+    label: "Order Custom Month Name"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Custom_Month_Name`;;
+  }
+
+  dimension: Order_d_Custom_Month_Of_Quarter {
+    label: "Order Custom Month Of Quarter"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Custom_Month_Of_Quarter`;;
+  }
+
+  dimension: Order_d_Custom_Month_Of_Year {
+    label: "Order Custom Month Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Custom_Month_Of_Year`;;
+  }
+
+  dimension: Order_d_Custom_Quarter_Of_Year {
+    label: "Order Custom Quarter Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Custom_Quarter_Of_Year`;;
+  }
+
+  dimension: Order_d_Custom_Week_Of_Month {
+    label: "Order Custom Week Of Month"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Custom_Week_Of_Month`;;
+  }
+
+  dimension: Order_d_Custom_Week_Of_Year {
+    label: "Order Custom Week Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Custom_Week_Of_Year`;;
+  }
+
+  dimension: Order_d_Reporting_Month_Name {
+    label: "Order ReportIng Month Name"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_Reporting_Month_Name`;;
+  }
+
+  dimension: Order_d_day_of_month {
+    label: "Order Day Of Month"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Order d_day_of_month`;;
+  }
+
+  dimension: Order_d_day_of_week_name {
+    label: "Order Day Of Week Name"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order d_day_of_week_name`;;
+  }
+
+  dimension: Order_d_day_of_week_number {
+    label: "Order Day Of Week Number"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Order d_day_of_week_number`;;
+  }
+
+  dimension: Order_d_month_of_year {
+    label: "Order Month Of Year"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Order d_month_of_year`;;
+  }
+
+  dimension: Order_d_quarter_number {
+    label: "Order Quarter Number"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Order d_quarter_number`;;
+  }
+
+  dimension: Order_d_week_of_year {
+    label: "Order Week Of Year"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Order d_week_of_year`;;
+  }
+
+  dimension: Order_w_day_of_week_name {
+    label: "Order W Day Of Week Name"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Order w_day_of_week_name`;;
+  }
+
+  dimension: Order_w_day_of_week_number {
+    label: "Order W Day Of Week Number"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Order w_day_of_week_number`;;
+  }
+
   dimension: Product_Dimension.Product_Category {
     label: "  Product Category"
     description: "Product Sub Category"
@@ -234,6 +437,13 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Date Month Hierarchy"
     type: string
     sql: ${TABLE}.`Ship DayMonth`;;
+  }
+
+  dimension: Ship_Day_Date {
+    label: "Ship Day Date"
+    group_label: "Date Attributes"
+    type: date_time
+    sql: ${TABLE}.`Ship Day_Date`;;
   }
 
   dimension: Date_Month_Hierarchy.Ship_Month1 {
@@ -292,6 +502,76 @@ view: Sales_Insights___Redshift {
     group_label: "Date Attributes.Ship Retail445"
     type: date_time
     sql: ${TABLE}.`Ship Reporting_Day`;;
+  }
+
+  dimension: Ship_Reporting_Day_Of_Month {
+    label: "Ship ReportIng Day Of Month"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship Reporting_Day_Of_Month`;;
+  }
+
+  dimension: Ship_Reporting_Day_Of_Week {
+    label: "Ship ReportIng Day Of Week"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship Reporting_Day_Of_Week`;;
+  }
+
+  dimension: Ship_Reporting_Day_Of_Year {
+    label: "Ship ReportIng Day Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship Reporting_Day_Of_Year`;;
+  }
+
+  dimension: Ship_Reporting_Half_Year_Of_Year {
+    label: "Ship ReportIng Half Year Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship Reporting_Half_Year_Of_Year`;;
+  }
+
+  dimension: Ship_Reporting_Month_Of_Quarter {
+    label: "Ship ReportIng Month Of Quarter"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship Reporting_Month_Of_Quarter`;;
+  }
+
+  dimension: Ship_Reporting_Month_Of_Year {
+    label: "Ship ReportIng Month Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship Reporting_Month_Of_Year`;;
+  }
+
+  dimension: Ship_Reporting_Quarter_Of_Year {
+    label: "Ship ReportIng Quarter Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship Reporting_Quarter_Of_Year`;;
+  }
+
+  dimension: Ship_Reporting_Week_Of_Month {
+    label: "Ship ReportIng Week Of Month"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship Reporting_Week_Of_Month`;;
+  }
+
+  dimension: Ship_Reporting_Week_Of_Year {
+    label: "Ship ReportIng Week Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship Reporting_Week_Of_Year`;;
+  }
+
+  dimension: Ship_W_Day_Date {
+    label: "Ship W Day Date"
+    group_label: "Date Attributes"
+    type: date_time
+    sql: ${TABLE}.`Ship W_Day_Date`;;
   }
 
   dimension: Date_Week_Hierarchy.Ship_Week {
@@ -356,6 +636,132 @@ view: Sales_Insights___Redshift {
     sql: ${TABLE}.`Ship customyear`;;
   }
 
+  dimension: Ship_d_Custom_Day_Of_Month {
+    label: "Ship Custom Day Of Month"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Custom_Day_Of_Month`;;
+  }
+
+  dimension: Ship_d_Custom_Day_Of_Week {
+    label: "Ship Custom Day Of Week"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Custom_Day_Of_Week`;;
+  }
+
+  dimension: Ship_d_Custom_Day_Of_Year {
+    label: "Ship Custom Day Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Custom_Day_Of_Year`;;
+  }
+
+  dimension: Ship_d_Custom_Month_Name {
+    label: "Ship Custom Month Name"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Custom_Month_Name`;;
+  }
+
+  dimension: Ship_d_Custom_Month_Of_Quarter {
+    label: "Ship Custom Month Of Quarter"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Custom_Month_Of_Quarter`;;
+  }
+
+  dimension: Ship_d_Custom_Month_Of_Year {
+    label: "Ship Custom Month Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Custom_Month_Of_Year`;;
+  }
+
+  dimension: Ship_d_Custom_Quarter_Of_Year {
+    label: "Ship Custom Quarter Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Custom_Quarter_Of_Year`;;
+  }
+
+  dimension: Ship_d_Custom_Week_Of_Month {
+    label: "Ship Custom Week Of Month"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Custom_Week_Of_Month`;;
+  }
+
+  dimension: Ship_d_Custom_Week_Of_Year {
+    label: "Ship Custom Week Of Year"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Custom_Week_Of_Year`;;
+  }
+
+  dimension: Ship_d_Reporting_Month_Name {
+    label: "Ship ReportIng Month Name"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_Reporting_Month_Name`;;
+  }
+
+  dimension: Ship_d_day_of_month {
+    label: "Ship Day Of Month"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Ship d_day_of_month`;;
+  }
+
+  dimension: Ship_d_day_of_week_name {
+    label: "Ship Day Of Week Name"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship d_day_of_week_name`;;
+  }
+
+  dimension: Ship_d_day_of_week_number {
+    label: "Ship Day Of Week Number"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Ship d_day_of_week_number`;;
+  }
+
+  dimension: Ship_d_month_of_year {
+    label: "Ship Month Of Year"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Ship d_month_of_year`;;
+  }
+
+  dimension: Ship_d_quarter_number {
+    label: "Ship Quarter Number"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Ship d_quarter_number`;;
+  }
+
+  dimension: Ship_d_week_of_year {
+    label: "Ship Week Of Year"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Ship d_week_of_year`;;
+  }
+
+  dimension: Ship_w_day_of_week_name {
+    label: "Ship W Day Of Week Name"
+    group_label: "Date Attributes"
+    type: string
+    sql: ${TABLE}.`Ship w_day_of_week_name`;;
+  }
+
+  dimension: Ship_w_day_of_week_number {
+    label: "Ship W Day Of Week Number"
+    group_label: "Date Attributes"
+    type: number
+    sql: ${TABLE}.`Ship w_day_of_week_number`;;
+  }
+
   dimension: Size {
     label: "Size"
     group_label: "Product Attributes"
@@ -399,6 +805,13 @@ view: Sales_Insights___Redshift {
     sql: ${TABLE}.`currency`;;
   }
 
+  dimension: d_city {
+    label: "City"
+    group_label: "Customer Attributes"
+    type: string
+    sql: ${TABLE}.`d_city`;;
+  }
+
   dimension: d_firstname {
     label: "First Name"
     group_label: "Customer Attributes"
@@ -411,6 +824,13 @@ view: Sales_Insights___Redshift {
     group_label: "Customer Attributes"
     type: string
     sql: ${TABLE}.`d_lastname`;;
+  }
+
+  dimension: d_postalcode {
+    label: "Postal Code"
+    group_label: "Customer Attributes"
+    type: string
+    sql: ${TABLE}.`d_postalcode`;;
   }
 
   dimension: d_productsubcategoryId {
