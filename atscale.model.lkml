@@ -16,6 +16,7 @@ view: Sales_Insights___Redshift {
     sql: ${TABLE}.`City`;;
   }
 
+
   dimension: Color {
     label: "Color"
     description: "Product Color"
