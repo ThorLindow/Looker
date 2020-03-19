@@ -9,6 +9,7 @@ view: Sales_Insights___Redshift {
   label: "Internet Sales Cube"
   sql_table_name: "Sales Insights - Redshift"."Internet Sales Cube";;
 
+
   dimension: Geography_City.City {
     label: "  City"
     group_label: "Customer Attributes.Geography City"
