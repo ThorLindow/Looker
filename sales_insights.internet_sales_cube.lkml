@@ -2050,4 +2050,3 @@ view: Sales_Insights {
         sql: ${TABLE}.`SoldProductNDC-Order Retail445-YTDPrevYear`;;
     }
 }
-
