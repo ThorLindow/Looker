@@ -8,13 +8,13 @@
 #
 
 connection: "atscale_server"
-label: "default"
+label: "Sales Insights"
 
-explore: Sales_Insights_Internet_Sales_Cube {
-    label: "Sales Insights.Internet Sales Cube"
+explore: Internet_Sales_Cube {
+    label: "Internet Sales Cube"
 }
 
-view: Sales_Insights_Internet_Sales_Cube {
+view: Internet_Sales_Cube {
     label: "Internet Sales Cube"
     sql_table_name: "Sales Insights"."Internet Sales Cube";;
 
