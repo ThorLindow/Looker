@@ -10,11 +10,11 @@
 connection: "atscale_server"
 label: "default"
 
-explore: Sales_Insights {
-    label: "Sales Insights"
+explore: Sales_Insights_Internet_Sales_Cube {
+    label: "Sales Insights.Internet Sales Cube"
 }
 
-view: Sales_Insights {
+view: Sales_Insights_Internet_Sales_Cube {
     label: "Internet Sales Cube"
     sql_table_name: "Sales Insights"."Internet Sales Cube";;
 
@@ -2059,4 +2059,3 @@ view: Sales_Insights {
         sql: ${TABLE}.`SoldProductNDC-Order Retail445-YTDPrevYear`;;
     }
 }
-
