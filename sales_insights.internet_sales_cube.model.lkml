@@ -33,6 +33,14 @@ view: Internet_Sales_Cube {
         sql: ${TABLE}.`Color`;;
     }
 
+  dimension: Color2 {
+    label: "Color2"
+    description: "Product Color2"
+    group_label: "Product Attributes"
+    type: string
+    sql: ${TABLE}.`Color`;;
+  }
+
     dimension: Geography_City.CountryCity {
         label: "    Country"
         group_label: "Customer Attributes.Geography City"
@@ -2059,4 +2067,3 @@ view: Internet_Sales_Cube {
         sql: ${TABLE}.`SoldProductNDC-Order Retail445-YTDPrevYear`;;
     }
 }
-
