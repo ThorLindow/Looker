@@ -25,7 +25,7 @@ view: Internet_Sales_Cube {
         sql: ${TABLE}.`City`;;
     }
 
-    dimension: Color {
+    dimension: Coloras {
         label: "Color"
         description: "Product Color"
         group_label: "Product Attributes"
