@@ -32,6 +32,13 @@ view: Carl {
         sql: ${TABLE}.`Color`;;
     }
 
+  dimension: CarlColor {
+    label: "Carl's Color"
+    group_label: "Product Attributes"
+    type: string
+    sql: ${TABLE}.`Color`;;
+  }
+
     dimension: Geography_City.CountryCity {
         label: "    Country"
         group_label: "Customer Attributes.Geography City"
@@ -424,4 +431,3 @@ view: Carl {
         sql: ${TABLE}.`m_salesamount_sum`;;
     }
 }
-
