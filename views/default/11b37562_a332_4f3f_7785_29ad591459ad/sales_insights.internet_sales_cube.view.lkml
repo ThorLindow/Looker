@@ -949,7 +949,7 @@ view: Internet_Sales_Cube {
     measure: orderquantity1 {
         label: "Order Quantity"
         group_label: "Sales Metrics"
-        value_format: "#,####"
+        value_format: "#,##0"
         drill_fields: [Customer_Details*,Shipping_Details*]
         type: sum
         sql: ${TABLE}.`orderquantity1`;;
