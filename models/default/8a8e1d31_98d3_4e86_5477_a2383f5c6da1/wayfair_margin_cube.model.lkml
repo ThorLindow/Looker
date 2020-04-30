@@ -6,11 +6,10 @@
 # Project: Wayfair-MARGIN CUBE
 
 connection: "atscale_server"
-label: "Wayfair-MARGIN CUBE"
+label: "Wayfair"
 
 include: "/views/default/8a8e1d31_98d3_4e86_5477_a2383f5c6da1/wayfair_margin_cube.margin_cube.view"
 
 explore: MARGIN_CUBE {
     label: "MARGIN CUBE"
 }
-

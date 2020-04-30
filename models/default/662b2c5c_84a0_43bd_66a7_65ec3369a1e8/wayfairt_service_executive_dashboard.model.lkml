@@ -6,11 +6,10 @@
 # Project: Wayfairt-Service Executive Dashboard
 
 connection: "atscale_server"
-label: "Wayfairt-Service Executive Dashboard"
+label: "Wayfair"
 
 include: "/views/default/662b2c5c_84a0_43bd_66a7_65ec3369a1e8/wayfairt_service_executive_dashboard.service_executive_dashboard.view"
 
 explore: Service_Executive_Dashboard {
     label: "Service Executive Dashboard"
 }
-
