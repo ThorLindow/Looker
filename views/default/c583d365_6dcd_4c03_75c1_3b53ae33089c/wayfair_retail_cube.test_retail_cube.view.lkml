@@ -526,7 +526,6 @@ view: Test_Retail_Cube {
         group_label: "Is Major Holiday.Is Major Holiday"
         type: string
         sql: ${TABLE}.`Is Major Holiday`;;
-        drill_fields: [Is_Major_Holiday_Time1]
     }
 
     dimension: Is_PSD_Supplier {
@@ -1613,7 +1612,7 @@ view: Test_Retail_Cube {
     }
 
     measure: Gross_Profit_Margin_w_o_Fulfillment {
-        label: "Gross Profit Margin w/o Fulfillment	"
+        label: "Gross Profit Margin w/o Fulfillment "
         group_label: "Financials\Profit"
         value_format: "$#.00;($#.00)"
         drill_fields: [Default_Drill_Through_6ed85b5ba39eff64dc140982d630f7d7*]
@@ -2546,4 +2545,3 @@ view: Test_Retail_Cube {
 # END CUSTOMIZATIONS
 #
 }
-
