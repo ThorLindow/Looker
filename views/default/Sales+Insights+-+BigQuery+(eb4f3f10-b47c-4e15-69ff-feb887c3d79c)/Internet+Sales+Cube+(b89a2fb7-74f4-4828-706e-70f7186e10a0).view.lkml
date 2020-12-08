@@ -11,7 +11,7 @@ view: Internet_Sales_Cube {
     sql_table_name: "Sales Insights - BigQuery"."Internet Sales Cube";;
 
     dimension: Customer_Hierarchy_Customer_Name {
-        label: "Chris' Customer Name"
+        label: "Customer Name"
         description: "Customer Key"
         group_label: "Customer Attributes"
         type: string
