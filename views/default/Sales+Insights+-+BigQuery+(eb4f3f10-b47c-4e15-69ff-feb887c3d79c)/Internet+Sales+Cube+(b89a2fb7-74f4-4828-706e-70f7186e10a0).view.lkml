@@ -19,7 +19,7 @@ view: Internet_Sales_Cube {
     }
 
     dimension: Gender_Hierarchy_Gender {
-        label: "Gender Mine"
+        label: "Gender"
         group_label: "Customer Attributes"
         type: string
         sql: ${TABLE}.`Gender`;;
