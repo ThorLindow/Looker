@@ -697,7 +697,7 @@ view: TPC_DS_Benchmark_Model {
     dimension: Date_Dimension_Sold_Calendar_Year {
         label: "    Sold Calendar Year"
         group_label: "Date Attributes.Sold Date Dimension"
-        type: number
+        type: string
         sql: ${TABLE}.`Sold Calendar Year`;;
         drill_fields: [Date_Dimension_Sold_Calendar_Quarter]
     }
@@ -1927,4 +1927,3 @@ view: TPC_DS_Benchmark_Model {
 # END CUSTOMIZATIONS
 #
 }
-
