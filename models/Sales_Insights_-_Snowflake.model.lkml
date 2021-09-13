@@ -12,10 +12,9 @@ connection: "atscale_server"
 label: "Sales Insights - Snowflake"
 
 
-include: "/views/Sales Insights - Snowflake/Internet Sales Cube.view.lkml"
-
+include: "/views/Sales Insights - Snowflake/Internet_Sales_Cube.view.lkml"
+include: "/views/Sales Insights - Snowflake/Internet_Sales_Cube_Customizations.view.lkml"
 
 explore: Internet_Sales_Cube {
   label: "Internet Sales Cube"
 }
-
