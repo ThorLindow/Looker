@@ -1,6 +1,7 @@
+include: "/views/Sales Insights - Snowflake/Internet_Sales_Cube.view.lkml"
+
 view: internet_sales_cube_customizations {
-  label: "Internet Sales Cube - Customizations"
-  sql_table_name: "Sales Insights - Snowflake"."Internet Sales Cube";;
+  extends: [Internet_Sales_Cube]
 
   measure: salesamount2 {
     label: "Sales Amount Custom"

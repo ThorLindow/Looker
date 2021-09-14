@@ -1,5 +1,3 @@
-include: "/views/Sales Insights - Snowflake/Internet_Sales_Cube_Customizations.view.lkml"
-
 view: Internet_Sales_Cube {
     label: "Internet Sales Cube"
     sql_table_name: "Sales Insights - Snowflake"."Internet Sales Cube";;
