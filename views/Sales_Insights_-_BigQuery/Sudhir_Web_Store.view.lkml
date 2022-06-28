@@ -7,6 +7,12 @@ view: Sudhir_Web_Store {
         sql: ${TABLE}.`Color Level`;;
     }
 
+    dimension: Size_Hierarchy_Size_Level {
+        label: "Size Level"
+        type: string
+        sql: ${TABLE}.`Size Level`;;
+    }
+
     dimension: Style_Hierarchy_Style_Level {
         label: "Style Level"
         type: string
