@@ -600,7 +600,6 @@ view: Internet_Sales_GBQ_Model {
         label: "     Order ReportIng Half Year"
         group_label: "Date Attributes.Order Retail445"
         type: string
-        allow_fill: no
         sql: ${TABLE}.`Order ReportIng_Half_Year`;;
         drill_fields: [Retail445_Order_ReportIng_Quarter]
     }
@@ -751,7 +750,6 @@ view: Internet_Sales_GBQ_Model {
         label: "     Ship ReportIng Half Year"
         group_label: "Date Attributes.Ship Retail445"
         type: string
-        allow_fill: no
         sql: ${TABLE}.`Ship ReportIng_Half_Year`;;
         drill_fields: [Retail445_Ship_ReportIng_Quarter]
     }
